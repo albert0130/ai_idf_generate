@@ -57,12 +57,12 @@ export default function LeftPart({ message, setMessage }: LeftPartProps) {
 
     // Change styles for PDF generation
     const elements = contentRef.current.querySelectorAll('.exclude-from-pdf');
-    const originalStyles: Record<string, { color: string; backgroundColor: string }>[] = [];
+    var originalStyles : any;
 
     elements.forEach((elem) => {
       if (elem instanceof HTMLElement) {
         originalStyles.push({
-          color: elem.style.color,
+          color : elem.style.color,
           backgroundColor: elem.style.backgroundColor,
         });
         elem.style.display = 'none';
