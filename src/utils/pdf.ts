@@ -4,8 +4,7 @@ import { fontBase64 } from '@/fonts/Alef-Regular-normal';
 import { IDFData, Inventor, PriorArtItem, DisclosureItem, PublicationPlan } from '@/types/idf';
 
 export function changeToFallbackStyles(elem: HTMLElement): Record<string, { color: string; backgroundColor: string }> {
-  const originalStyles: Record<string, { color: string; backgroundColor: string }> = {};
-  
+  var originalStyles : any;
   const style = elem.style;
   originalStyles.color = style.color || '';
   originalStyles.backgroundColor = style.backgroundColor || '';
@@ -18,7 +17,7 @@ export function changeToFallbackStyles(elem: HTMLElement): Record<string, { colo
 }
 
 export function resetStyles(elem: HTMLElement, originalStyles: Record<string, { color: string; backgroundColor: string }>): void {
-  const style = elem.style;
+  const style : any = elem.style;
   style.color = originalStyles.color;
   style.backgroundColor = originalStyles.backgroundColor;
 }
