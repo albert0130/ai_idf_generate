@@ -22,7 +22,7 @@ export default function DataTable<T extends Record<string, any>>({
   addButtonText = '+ Add Row'
 }: DataTableProps<T>) {
   const handleRowChange = (idx: number, field: keyof T, value: string) => {
-    const updated = [...data];
+    const updated : any = [...data];
     updated[idx][field] = value;
     onUpdateData(updated);
   };
@@ -34,7 +34,7 @@ export default function DataTable<T extends Record<string, any>>({
   };
 
   const handleAddRow = () => {
-    const emptyRow = columns.reduce((acc, col) => {
+    const emptyRow = columns.reduce((acc : any, col) => {
       acc[col] = '';
       return acc;
     }, {} as T);
